@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
         textAlign: "right",
     },
     button: {
-        backgroundColor: "pink",
+        backgroundColor: "green",
         padding: 15,
         borderRadius: 30,
         alignItems: "center",
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
     }, 
     singup: {
-        color: "pink",
+        color: "green",
         paddingLeft: 5,
     }
 

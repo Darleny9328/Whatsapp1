@@ -5,29 +5,29 @@ import {styles} from '../styles/register.js'
 
 export default function Register(props) {
   const { navigation } = props;
+  const [selectedImage, setSelectedImage] = useState(null);
 
 
   const goToLogin = () => {
     navigation.navigate("Login");
   }
 
-  const openImagePicker = async () => {
-    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
-  
-    if (permissionResult.granted === false) {
-      alert('Permiso para acceder a la galería denegado');
-      return;
-    }
-  
-    const result = await ImagePicker.launchImageLibraryAsync();
-    if (!result.cancelled) {
-      // La imagen fue seleccionada con éxito
-      console.log(result);
-      setSelectedImage(result.uri);
-    }
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.canceled) {
+        setSelectedImage(result.assets[0].uri);
+      }
+      
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -45,7 +45,7 @@ export default function Register(props) {
                     <Text style={styles.label}>Nombre</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="pink"                
+                            underlineColorAndroid="green"                
                             placeholder="Ingrese su nombre"
                         />
                 </View>
@@ -53,7 +53,7 @@ export default function Register(props) {
                         <Text style={styles.label}>Correo electrónico</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="pink"                
+                            underlineColorAndroid="green"                
                             placeholder="ejemplo@ejemplo.com"
                             keyboardType='email-address'
                             returnKeyType='next'
@@ -64,7 +64,7 @@ export default function Register(props) {
                         <Text style={styles.label}>Contraseña</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="pink"                
+                            underlineColorAndroid="green"                
                             placeholder="********"
                             secureTextEntry={true} 
                         />
@@ -73,7 +73,7 @@ export default function Register(props) {
                         <Text style={styles.label}>Confirmar la contraseña</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="pink"                
+                            underlineColorAndroid="green"                
                             placeholder="********"
                             secureTextEntry={true} 
                         />
@@ -84,14 +84,11 @@ export default function Register(props) {
                         </TouchableOpacity>
                     </View>
 
-                    <View>
-                        {selectedImage && (
-                          <Image source={{ uri: selectedImage }} style={{ width: 200, height: 200 }} />)}
-                          <TouchableOpacity style={styles.buttonImage}>
-                              <Text onPress={openImagePicker}>Selecciona una imagen de tu galería</Text>
-                          </TouchableOpacity>
+                    <View style={styles.spacing}>
+                        <Text style={[styles.button, styles.buttonText]} onPress={pickImage} >Selecciona una imagen de tu galería</Text>
+                        {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: 100, height: 100 }} />}
+                    </View>
 
-                      </View>
                 </View> 
 
                     <View style={[styles.spacing, styles.row]}>
@@ -104,5 +101,6 @@ export default function Register(props) {
     </SafeAreaView>
   );
 }
+
 
 

@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     },
     title: {
       fontSize: 38,
-      color: "black",
+      color: "green",
       fontWeight: "bold",
       marginTop: 25,
       
@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
       padding: 8,
     },
     button: {
-      backgroundColor: "pink",
+      backgroundColor: "green",
       padding: 15,
       borderRadius: 30,
       alignItems: "center",
@@ -63,7 +63,7 @@ export const styles = StyleSheet.create({
       justifyContent: "center",
     },
     signUp: {
-      color: "pink",
+      color: "green",
       paddingLeft: 5,
     }
   })
