@@ -85,8 +85,10 @@ export default function Register(props) {
                     </View>
 
                     <View style={styles.spacing}>
-                        <Text style={[styles.button, styles.buttonText]} onPress={pickImage} >Selecciona una imagen de tu galería</Text>
-                        {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: 100, height: 100 }} />}
+                    <TouchableOpacity style={styles.button}>
+                            <Text style={styles.buttonText} onPress={pickImage}>Selecciona una imagen de tu galería</Text>
+                            {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: 100, height: 100 }} />} 
+                        </TouchableOpacity>
                     </View>
 
                 </View> 
