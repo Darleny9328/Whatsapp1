@@ -35,17 +35,17 @@ export default function Register(props) {
         <View style={styles.firstSection}>
             <View>
                 <View>
-                    <Text style={styles.title}>Regístrate para una nueva cuenta</Text>
+                    <Text style={styles.title}>Strand</Text>
                 </View>
                 <View>
-                    <Text style={styles.formTitle}>Sólo necesitamos algo más de información</Text>
+                    <Text style={styles.formTitle}>Inscribirse</Text>
                 </View>
            
                 <View style={styles.spacing}>
                     <Text style={styles.label}>Nombre</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="green"                
+                            underlineColorAndroid="white"                
                             placeholder="Ingrese su nombre"
                         />
                 </View>
@@ -53,7 +53,7 @@ export default function Register(props) {
                         <Text style={styles.label}>Correo electrónico</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="green"                
+                            underlineColorAndroid="white"                
                             placeholder="ejemplo@ejemplo.com"
                             keyboardType='email-address'
                             returnKeyType='next'
@@ -64,7 +64,7 @@ export default function Register(props) {
                         <Text style={styles.label}>Contraseña</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="green"                
+                            underlineColorAndroid="white"                
                             placeholder="********"
                             secureTextEntry={true} 
                         />
@@ -73,7 +73,7 @@ export default function Register(props) {
                         <Text style={styles.label}>Confirmar la contraseña</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="green"                
+                            underlineColorAndroid="white"                
                             placeholder="********"
                             secureTextEntry={true} 
                         />

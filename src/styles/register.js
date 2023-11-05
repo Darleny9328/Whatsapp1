@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     
     firstSection: {
       flex: 1,
-      backgroundColor: "white",
+      backgroundColor: "#C76A6A",
       width: "100%",
       borderTopRightRadius: 25,
       borderTopLeftRadius: 25,
@@ -19,19 +19,18 @@ export const styles = StyleSheet.create({
     },
     title: {
       fontSize: 38,
-      color: "green",
+      color: "white",
       fontWeight: "bold",
-      marginTop: 25,
-      
-      
+      marginTop: 120,   
     },
     formTitle: {
-      fontSize: 14,
-      color: "#78828c",
-      marginBottom: 20,
+      fontSize: 25,
+      color: "white",
+      marginBottom: 5,
     },
     label: {
-      color: "#78828c",
+      color: "black",
+      
       
     },
     textInput: {
@@ -39,7 +38,7 @@ export const styles = StyleSheet.create({
       padding: 8,
     },
     button: {
-      backgroundColor: "green",
+      backgroundColor: "white",
       padding: 15,
       borderRadius: 30,
       alignItems: "center",
@@ -52,7 +51,7 @@ export const styles = StyleSheet.create({
       marginTop: 20,
     },
     buttonText: {
-      color: "white",
+      color: "black",
       fontWeight: "bold",
     },
     spacing: {
@@ -63,7 +62,8 @@ export const styles = StyleSheet.create({
       justifyContent: "center",
     },
     signUp: {
-      color: "green",
+      color: "white",
       paddingLeft: 5,
+      fontWeight: "bold",
     }
   })

@@ -3,62 +3,53 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: '#C76A6A',
         alignItems: 'center',
         justifyContent: 'center',
       },
-      firstSection: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: "green",
-        width: "100%",
-      },
-    secondSection: {
-        flex: 2,
-        backgroundColor: "white",
-        width: "100%",
-        borderTopRightRadius: 25,
-        borderTopLeftRadius: 25,
-        padding: 20,
-        justifyContent: "space-between",
-    },
     title:{
-        fontSize: 48,
-        color: "white",
-        fontWeight: "bold",
+      fontSize: 56,
+      color: "white",
+      fontWeight: "bold",
     },
+    formTitle: {
+        fontSize: 25,
+        color: "white",
+        marginBottom: 20,
+        fontWeight: "bold"
+      },
     label: {
-        color: "#78828c",
+        color: "black",
     },
     textInput: {
         color: "#000",
         padding: 8,
     },
     forgotPassword: {
-        color: "#78828c",
+        color: "black",
         textAlign: "right",
     },
     button: {
-        backgroundColor: "green",
+        backgroundColor: "white",
         padding: 15,
         borderRadius: 30,
         alignItems: "center",
     },
     buttonText: {
-        color: "white",
+        color: "black",
         fontWeight: "bold",
     },
     spacing: {
-        marginTop: 10,
+        marginTop: 25,
     },
     row: {
         flexDirection: "row",
         justifyContent: "center",
     }, 
     singup: {
-        color: "green",
+        color: "white",
         paddingLeft: 5,
+        fontWeight: "bold"
     }
 
 })

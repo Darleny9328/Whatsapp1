@@ -12,17 +12,14 @@ export default function Login(props) {
     return (
         <SafeAreaView style={styles.container}>
 
-            <View style={styles.firstSection}>
-                    <Image
-                        source={
-                           require("../images/pj.jpg")
-                        }
-                        style={{ width: "100%", height: "120%", resizeMode: "cover" }}
-                    />
-                    <View style={{ position: "absolute" }}>
-                        <Text style={styles.title}>Trevelo</Text>
-                    </View>
-            </View>
+             
+                     <View>
+                    <Text style={styles.title}>Strand</Text>
+                </View>
+                <View>
+                    <Text style={styles.formTitle}>Ayuda a salvar vidas</Text>
+                </View>
+             
                
             <View style={styles.secondSection}>
                 
@@ -31,7 +28,7 @@ export default function Login(props) {
                         <Text style={styles.label}>Correo electrónico</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="green"                
+                            underlineColorAndroid="white"                
                             placeholder="ejemplo@ejemplo.com"
                             keyboardType='email-address'
                             returnKeyType='next'
@@ -42,15 +39,13 @@ export default function Login(props) {
                         <Text style={styles.label}>Contraseña</Text>
                         <TextInput 
                             style={styles.textInput}
-                            underlineColorAndroid="green"                
+                            underlineColorAndroid="white"                
                             placeholder="********"
                             secureTextEntry={true} 
                         />
                     </View>
                     
-                    <View style={styles.spacing}>
-                        <Text style={styles.forgotPassword}>¿Olvidaste tu contraseña?</Text>
-                    </View>
+                  
 
                     <View style={styles.spacing}>
                         <TouchableOpacity style={styles.button}>
@@ -62,10 +57,13 @@ export default function Login(props) {
                 <View style={[styles.spacing, styles.row]}>
                     <Text style={styles.label}>¿No tienes una cuenta?</Text>
                     <TouchableOpacity onPress={goToRegister}>
-                        <Text style={styles.singup}>Registrarse</Text>
+                        <Text style={styles.singup}>Registrate</Text>
                     </TouchableOpacity>
                 </View>
                
+                   <View style={styles.spacing}>
+                        <Text style={styles.forgotPassword}>¿Olvidaste tu contraseña?</Text>
+                    </View>
             </View>
 
         </SafeAreaView>
